@@ -104,7 +104,7 @@ export default function Home() {
   </div>
 </section>
 
-<section className="w-full h-screen bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#1f2937] py-16 px-4 sm:px-8 md:px-16 text-white flex flex-col justify-center items-center">
+<section className="w-full min-h-screen bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#1f2937] py-16 px-4 sm:px-8 md:px-16 text-white flex flex-col justify-center items-center">
   <div className="max-w-5xl mx-auto text-center">
     <h2 className="text-3xl sm:text-4xl font-bold text-[#00ffae] mb-8">
       💬 Відгуки наших користувачів

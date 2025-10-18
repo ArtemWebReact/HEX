@@ -1,103 +1,173 @@
+"use client"
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
+import './home.css'
+import './globals.css'
 export default function Home() {
+  const [c,setC] = useState(0)
+  const  color = ['red', 'blue' , 'purple' , 'orange', 'yellow']
+  
+  setInterval(()=>{
+    const fun = async() => 
+    {
+      setC((colors)=>{ 
+    if(colors===4){
+      return 0
+    }else{
+      console.log(colors++)
+      return colors++
+    }
+    
+    })}
+  fun()}, 2000)
+  useEffect(()=>{
+    const gradient = document.querySelector('.gradient2')
+    gradient.style.backgroundImage = `linear-gradient(to right ,${color[c]}, ${color[c+1]})`
+    
+  }, [c])
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+   <section className = "bg-[url('/background/space.png')] bg-cover bg-center w-full h-screen  flex justify-around items-center  sm-flex-col ">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="gradient2 aspect-[1/1] w-auto  flex items-center justify-center flex-col gap-6 rounded-lg ">
+      <div className="  w-auto aspect-[1/1] flex bg-[black] text-center flex-col items-center justify-center p-6 lg:p-20">
+   
+<h1 className="xl:text-[1.5rem]   lg:text-[2rem] md:text-[1.6rem]  text-[1.2rem] text-[#00ffae] m-6 ">
+  Перетвори слова в шістнадцятковий та двійковий код
+</h1>
+<h2 className="xl:text-[1.3rem] lg:text-[1.5rem] md:text-[1.4rem] text-[1rem] text-[1rem] text-[#00ffae]">
+  Побач, як текст стає даними
+</h2>
+
+  
+
+   </div>
+   </div>
+
+   </section>
+   <section className = "gradient3  w-full h-screen  flex justify-center items-center ">
+ 
+   <div className="flex items-center justify-center flex-col">
+<h2 className="xl:text-[1.5rem]   lg:text-[2rem] md:text-[1.8rem]  text-[1.2rem] text-center w-full font-bold  text-[#00ffae] font-semibold">
+    Кодування тексту: ISO-8859-5, Windows-1251, KOI8-U
+  </h2>
+<div className="w-full  flex flex-wrap justify-center items-center">
+  <div className="hover text-center md:w-80 lg:w-90 w-40 min-h-40 bg-[white] bg-[white] aspect-[2/1] rounded text-[gray] font-semibold m-3 flex justify-center items-center hover:bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#1f2937] hover:transition-all duration-1000 ">
+  <p className="xl:text-[1.3rem] lg:text-[1.5rem] md:text-[1.6rem] text-[1rem] ">
+    🔧 Введи слово — отримай шістнадцяткове представлення
+    </p>
+  </div>
+
+  <div className="hover md:w-80 text-center lg:w-90 w-40 min-h-40 bg-[white] bg-[white] aspect-[2/1] rounded text-[gray] font-semibold m-3 flex justify-center items-center ">
+  <p className="xl:text-[1.3rem] lg:text-[1.5rem] md:text-[1.6rem] text-[1rem]">
+    🧩 Перевір, як кожна літера виглядає в двійковій системі
+    </p>
+  </div>
+
+  <div className="hover md:w-80 p-6 text-center  lg:w-90 w-40 min-h-40 bg-[white] bg-[white] aspect-[2/1] rounded text-[gray] font-semibold m-3 flex justify-center items-center ">
+  <p className="xl:text-[1.3rem] lg:text-[1.5rem] md:text-[1.6rem] text-[1rem]">
+    🧠 Навчися бачити текст як набір байтів
+    </p>
+  </div>
+
+  </div>
+</div>
+
+   </section>
+    <section className="bg-black bg-cover w-full min-h-screen flex flex-col md:flex-row justify-around items-center flex-wrap px-4 py-8 gap-8">
+  {/* Блок 1 */}
+  <div className="flex flex-col items-center text-center max-w-sm bg-gray">
+    <h2 className="text-[#00ffae] text-[1.5rem] md:text-[1.7rem] mb-4">1</h2>
+    <div className="w-[50%] md:w-[50%] rounded-full overflow-hidden hover:w-[80%] transition-all duration-1000">
+      <Image
+        src="/man.png"
+        layout="responsive"
+        width={1980}
+        height={1080}
+        alt="woman is smart"
+        style={{ borderRadius: '16px' }}
+      />
     </div>
+    <h3 className="text-[#00ffae] text-[1.2rem] md:text-[1.5rem] mt-4">Введи слово</h3>
+  </div>
+
+  {/* Блок 2 */}
+  <div className="flex flex-col items-center text-center max-w-sm">
+    <h2 className="text-[#00ffae] text-[1.5rem] md:text-[1.7rem] mb-4">2</h2>
+    <div className="w-[50%] md:w-[50%] rounded-full overflow-hidden hover:w-[80%] transition-all duration-1000">
+      <Image
+        src="/table.png"
+        layout="responsive"
+        width={1980}
+        height={1080}
+        alt="woman is Ready"
+        style={{ borderRadius: '16px' }}
+      />
+    </div>
+    <h3 className="text-[#00ffae] text-[1.2rem] md:text-[1.5rem] mt-4">Перетвори його в HEX/BIN</h3>
+  </div>
+
+  {/* Блок 3 */}
+  <div className="flex flex-col items-center text-center max-w-sm">
+    <h2 className="text-[#00ffae] text-[1.5rem] md:text-[1.7rem] mb-4">3</h2>
+    <div className="w-[50%] md:w-[50%] rounded-full overflow-hidden hover:w-[80%] transition-all duration-1000">
+      <Image
+        src="/smile.png"
+        layout="responsive"
+        width={1980}
+        height={1080}
+        alt="woman is chill"
+        style={{ borderRadius: '16px' }}
+      />
+    </div>
+    <h3 className="text-[#00ffae] text-[1.2rem] md:text-[1.5rem] mt-4">Насолоджуйся магією кодування</h3>
+  </div>
+</section>
+
+<section className="w-full h-screen bg-gradient-to-br from-[#1f2937] via-[#111827] to-[#1f2937] py-16 px-4 sm:px-8 md:px-16 text-white flex flex-col justify-center items-center">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold text-[#00ffae] mb-8">
+      💬 Відгуки наших користувачів
+    </h2>
+
+    <div className="flex gap-8 justify-center items-center flex-wrap ">
+      {/* Відгук 1 */}
+      <div className="w-[30%] bg-[#1e293b] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae]">
+        <p className="text-sm sm:text-base md:text-[1.6rem] text-gray-200 mb-4">
+          “Неймовірно швидко! Ввів текст — і вже через секунду отримав HEX-код. Сайт працює бездоганно.”
+        </p>
+        <p className="text-[#00ffae]  md:text-[1.4rem] font-semibold">— Андрій, Львів</p>
+      </div>
+
+      {/* Відгук 2 */}
+      <div className=" w-[30%] bg-[#1e293b] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae]">
+        <p className="text-sm sm:text-base text-gray-200 mb-4  md:text-[1.6rem]">
+          “Зручний інтерфейс, нічого зайвого. Просто, швидко і точно. Рекомендую всім, хто працює з кодуванням тексту.”
+        </p>
+        <p className="text-[#00ffae] font-semibold  md:text-[1.4rem]">— Олена, Харків</p>
+      </div>
+
+      {/* Відгук 3 */}
+      <div className=" w-[30%] bg-[#1e293b] p-6 rounded-xl shadow-lg border  aspect-[1/1] border-[#00ffae]">
+        <p className="text-sm sm:text-base text-gray-200 mb-4  md:text-[1.6rem]">
+          “Цей сервіс став частиною мого щоденного інструментарію. HEX-переклад ще ніколи не був таким простим.”
+        </p>
+        <p className="text-[#00ffae] font-semibold  md:text-[1.4rem]">— Максим, Київ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className = "w-full h-screen flex  bg-[green] bg-[url('/background/city.png')] bg-cover bg-center bg-no-repeat justify-center ">
+<div className="bg-green flex justify-center items-center w-full flex-col gap-10 text-[#00ffae]">
+  <h2 className = "text-[2rem]  w-full flex text-center justify-center items-center">Почни перекладати текст на HEX прямо зараз</h2>
+  <div className="flex justify-center  items-center w-full gap-10 text-[#00ffae] h-[10%] ">
+<button className="w-[20%] h-[100%] bg-[gray] hover:bg-[#00ffae] transition rounded-lg hover:transition-all hover:text-[gray] duration-1000  md:text-[1.6rem]">Windows-1251</button>
+<button className="w-[20%] h-[100%] bg-[gray] hover:bg-[#00ffae] transition rounded-lg hover:transition-all hover:text-[gray] duration-1000 md:text-[1.6rem] ">Iso-8859-5</button>
+<button className="w-[20%] h-[100%] bg-[gray] hover:bg-[#00ffae] transition rounded-lg hover:transition-all hover:text-[gray] duration-1000  md:text-[1.6rem]">KOI-8</button>
+</div>
+</div>
+</section>
+   </>
   );
 }

@@ -4,27 +4,7 @@ import { useEffect, useState } from "react";
 import './home.css'
 import './globals.css'
 export default function Home() {
-  const [c,setC] = useState(0)
-  const  color = ['red', 'blue' , 'purple' , 'orange', 'yellow']
-  
-  setInterval(()=>{
-    const fun = async() => 
-    {
-      setC((colors)=>{ 
-    if(colors===4){
-      return 0
-    }else{
-      console.log(colors++)
-      return colors++
-    }
-    
-    })}
-  fun()}, 2000)
-  useEffect(()=>{
-    const gradient = document.querySelector('.gradient2')
-    gradient.style.backgroundImage = `linear-gradient(to right ,${color[c]}, ${color[c+1]})`
-    
-  }, [c])
+ 
   return (
     <>
    <section className = "bg-[url('/background/space.png')] bg-cover bg-center w-full h-screen  flex justify-around items-center  sm-flex-col ">

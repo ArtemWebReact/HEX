@@ -13,7 +13,7 @@ const [letters, setLetters] = useState<Record<string, { hex: string; binary: str
         const data = await fetch('/letter3.json')
         const readyData = await data.json()
         console.log(readyData)
-        const windows = await readyData["windows_1251"]
+        const windows = await readyData["koi8_u"]
         console.log(windows)
         setLetters(await windows)
           setTimeout(()=>{

@@ -10,10 +10,10 @@ const [translate, setTranslate] = useState<ReactElement[]>([]);
 const [letters, setLetters] = useState<Record<string, { hex: string; binary: string }>>({});
     useEffect(()=>{
         const getData = async()=> {
-        const data = await fetch('/letter.json')
+        const data = await fetch('/letter4.json')
         const readyData = await data.json()
         console.log(readyData)
-        const windows = await readyData["windows_1251"]
+        const windows = await readyData["custom_encoding"]
         console.log(windows)
         setLetters(await windows)
           setTimeout(()=>{
@@ -62,7 +62,7 @@ getTranslation()
     }>Перекласти
     </button>
  <div className="flex flex-col ">
-        <p className="text-[gray]">Ваші слова в Windows-1251:</p>
+        <p className="text-[gray]">Ваші слова в custom_encoding:</p>
         <div className="flex flex-col ">
             {translate}
             </div>

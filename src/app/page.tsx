@@ -112,7 +112,7 @@ export default function Home() {
 
     <div className="flex gap-8 justify-center items-center flex-wrap ">
       {/* Відгук 1 */}
-      <div className="w-[50%] bg-[#1e293b] xl:w-[30%] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae]">
+      <div className="w-[70%] bg-[#1e293b] xl:w-[40%] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae] flex flex-col justify-center items-center">
         <p className="text-sm sm:text-base md:text-[1.6rem] text-gray-200 mb-4">
           “Неймовірно швидко! Ввів текст — і вже через секунду отримав HEX-код. Сайт працює бездоганно.”
         </p>
@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* Відгук 2 */}
-      <div className=" w-[50%] xl:w-[30%]  bg-[#1e293b] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae]">
+      <div className=" w-[70%] xl:w-[40%]  bg-[#1e293b] p-6 rounded-xl shadow-lg border aspect-[1/1] border-[#00ffae] flex flex-col justify-center items-center">
         <p className="text-sm sm:text-base text-gray-200 mb-4  md:text-[1.6rem]">
           “Зручний інтерфейс, нічого зайвого. Просто, швидко і точно. Рекомендую всім, хто працює з кодуванням тексту.”
         </p>
@@ -128,7 +128,7 @@ export default function Home() {
       </div>
 
       {/* Відгук 3 */}
-      <div className=" w-[50%] xl:w-[30%] bg-[#1e293b] p-6 rounded-xl shadow-lg border  aspect-[1/1] border-[#00ffae]">
+      <div className=" w-[70%] xl:w-[40%] bg-[#1e293b] p-6 rounded-xl shadow-lg border  aspect-[1/1] border-[#00ffae] flex flex-col justify-center items-center">
         <p className="text-sm sm:text-base text-gray-200 mb-4  md:text-[1.6rem]">
           “Цей сервіс став частиною мого щоденного інструментарію. HEX-переклад ще ніколи не був таким простим.”
         </p>

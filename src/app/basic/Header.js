@@ -19,11 +19,21 @@ document.body.classList.remove("overflow-hidden")
   <span className="w-8 h-[2px] bg-black"></span>
   <span className="w-8 h-[2px] bg-black"></span></button>
              <ul className="flex h-screen w-full items-center justify-center gap-10 flex-col ">
-                <li className="text-[black] text-[2rem]"><Link href = "/">Home</Link></li>
-                <li className="text-[black] text-[2rem]"><Link href = "/Windows-1251">Windows-1251</Link></li>
-                <li className="text-[black] text-[2rem]"><Link href = "/iso_8859_5">Iso-8859-5</Link></li>
-                <li className="text-[black] text-[2rem]"><Link href = "/KOI-8">KOI-8</Link></li>
-                <li className="text-[black] text-[2rem]"><Link href = "/MyTable">Власна таблиця</Link></li>
+                <li className="text-[black] text-[2rem]" onClick={()=>{
+                    setMenu("hidden")
+                }}><Link href = "/">Home</Link></li>
+                <li className="text-[black] text-[2rem]" onClick={()=>{
+                    setMenu("hidden")
+                }}><Link href = "/Windows-1251">Windows-1251</Link></li>
+                <li className="text-[black] text-[2rem]" onClick={()=>{
+                    setMenu("hidden")
+                }}><Link href = "/iso_8859_5">Iso-8859-5</Link></li>
+                <li className="text-[black] text-[2rem]" onClick={()=>{
+                    setMenu("hidden")
+                }}><Link href = "/KOI-8">KOI-8</Link></li>
+                <li className="text-[black] text-[2rem]" onClick={()=>{
+                    setMenu("hidden")
+                }}><Link href = "/MyTable">Власна таблиця</Link></li>
             </ul>
         </nav>
         <header className="bg-[#00ffae] w-full  h-[20%] flex  items-center z-[0] ">

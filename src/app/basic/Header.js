@@ -19,19 +19,19 @@ document.body.classList.remove("overflow-hidden")
   <span className="w-8 h-[2px] bg-black"></span>
   <span className="w-8 h-[2px] bg-black"></span></button>
              <ul className="flex h-screen w-full items-center justify-center gap-10 flex-col ">
-                <li className="text-[black] text-[2rem]" onClick={()=>{
+                <li className="text-[black] text-[1.4rem]" onClick={()=>{
                     setMenu("hidden")
                 }}><Link href = "/">Home</Link></li>
-                <li className="text-[black] text-[2rem]" onClick={()=>{
+                <li className="text-[black] text-[1.4rem]" onClick={()=>{
                     setMenu("hidden")
                 }}><Link href = "/Windows-1251">Windows-1251</Link></li>
-                <li className="text-[black] text-[2rem]" onClick={()=>{
+                <li className="text-[black]  text-[1.4rem]" onClick={()=>{
                     setMenu("hidden")
                 }}><Link href = "/iso_8859_5">Iso-8859-5</Link></li>
-                <li className="text-[black] text-[2rem]" onClick={()=>{
+                <li className="text-[black]  text-[1.4rem]" onClick={()=>{
                     setMenu("hidden")
                 }}><Link href = "/KOI-8">KOI-8</Link></li>
-                <li className="text-[black] text-[2rem]" onClick={()=>{
+                <li className="text-[black] text-[1.4rem]" onClick={()=>{
                     setMenu("hidden")
                 }}><Link href = "/MyTable">Власна таблиця</Link></li>
             </ul>

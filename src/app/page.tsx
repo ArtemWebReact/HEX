@@ -33,8 +33,8 @@ if(entry.isIntersecting){
     <>
    <section className = "bg-[url('/background/space.png')] bg-cover bg-center w-full h-screen  flex justify-around items-center  sm-flex-col  ">
 
-    <div  className="entry gradient2 aspect-[1/1] w-auto  opacity-0 items-center justify-center flex-col gap-6 rounded-lg  transition-all duration-1000">
-      <div className="  w-auto aspect-[1/1] flex bg-[black] text-center flex-col items-center justify-center p-6 lg:p-20">
+    <div  className="entry  aspect-[1/1] w-60  md:w-100  opacity-0 items-center justify-center flex-col gap-6 rounded-lg  transition-all duration-1000">
+      <div className="  w-auto aspect-[1/1] flex bg-[black] text-center flex-col items-center justify-center p-6 lg:p-6">
    
 <h1 className="xl:text-[1.5rem]   lg:text-[2rem] md:text-[1.6rem]  text-[1.2rem] text-[#00ffae] m-6 ">
   Перетвори слова в шістнадцятковий та двійковий код
